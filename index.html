@@ -117,38 +117,7 @@ border: 1px solid white;
 <body>
 <canvas width="400" height="400" id="game"></canvas>
 <script>
-//1 Часть/ настройка игрового поля
-var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
 
-var grid = 16;
-var count = 0;
-
-var snake = {
-x: 160,
-y: 160,
-
-// snake velocity. moves one grid length every frame in either the x or y direction
-dx: grid,
-dy: 0,
-
-// keep track of all grids the snake body occupies
-cells: [],
-
-// length of the snake. grows when eating an apple
-maxCells: 4
-};
-var apple = {
-x: 320,
-y: 320
-};
-
-// get random whole numbers in a specific range
-// @see https://stackoverflow.com/a/1527820/2124254
-function getRandomInt(min, max) {
-return Math.floor(Math.random() * (max - min)) + min;
-}
-  
 // 2 Часть работа с анимацией змейки
 // game loop
 function loop() {
